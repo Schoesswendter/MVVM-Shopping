@@ -22,6 +22,7 @@ namespace Shop
     {
         public MainWindow()
         {
+            DataContext = new MainWindowViewModel();
             InitializeComponent();
         }
     }
