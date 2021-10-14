@@ -59,10 +59,12 @@ namespace Shop.ViewModel
         private void PutIntoCart(object item)
         {
             ItemsInCart.Add(_selectedItem);
+            AddToCartCommand.RaiseCanExecuteChanged();
         }
         private void RemoveFromCart(object item)
         {
             ItemsInCart.Remove(_selectedItem);
+            AddToCartCommand.RaiseCanExecuteChanged();
         }
 
         private void GetCart(object obj)
