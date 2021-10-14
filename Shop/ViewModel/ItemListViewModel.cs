@@ -11,11 +11,26 @@ namespace Shop.ViewModel
 
         private int _selectedItemIndex;
 
+        private bool _showAllItems;
+        private bool _showCartItems;
+
         public ObservableCollection<Item> Items { get; set; }
         public ObservableCollection<Item> ItemsInCart { get; set; }
 
-        public bool ShowAllItems { get; set; }
-        public bool ShowCartItems { get; set; }
+        public bool ShowAllItems { get => _showAllItems; set
+            {
+                _showAllItems = value;
+                RaisePropertyChanged(nameof(ShowAllItems));
+            }
+        }
+        public bool ShowCartItems
+        {
+            get => _showCartItems; set
+            {
+                _showCartItems = value;
+                RaisePropertyChanged(nameof(ShowCartItems));
+            }
+        }
 
         public Item SelectedItem
         {
@@ -23,7 +38,7 @@ namespace Shop.ViewModel
             set
             {
                 _selectedItem = value;
-                RaisePropertyChanged("selectedItem");
+                RaisePropertyChanged(nameof(SelectedItem));
             }
         }
 
@@ -54,16 +69,12 @@ namespace Shop.ViewModel
         {
             ShowAllItems = false;
             ShowCartItems = true;
-            RaisePropertyChanged("ShowAllItems");
-            RaisePropertyChanged("ShowCartItems");
         }
         
         private void CloseCart(object obj)
         {
             ShowAllItems = true;
             ShowCartItems = false;
-            RaisePropertyChanged("ShowAllItems");
-            RaisePropertyChanged("ShowCartItems");
         }
 
         public ItemListViewModel()
