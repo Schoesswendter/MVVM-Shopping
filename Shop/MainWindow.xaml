@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Shop"
         mc:Ignorable="d"
-        Title="{Binding Title}" Height="500" Width="800">
+        Title="{Binding Title}" Height="500" Width="850">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Text="{Binding Title}" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontWeight="Bold" FontSize="28" FontFamily="Bahnschrift SemiBold" Margin="0,0,-3,0"/>
         <ContentPresenter Content="{Binding ItemList}" Grid.Row="0" VerticalAlignment="Top"/>

@@ -5,20 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Shop.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"  FontFamily="Bahnschrift Light">
     <Grid>
-        <Button Visibility="{Binding Path=ShowAllItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Add to Cart" Command="{Binding AddToCartCommand, UpdateSourceTrigger=PropertyChanged}" Height="20" Panel.ZIndex="-2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 0, 0, 0"/>
-        <Button Visibility="{Binding Path=ShowCartItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Remove from Cart" Command="{Binding RemoveFromCartCommand, UpdateSourceTrigger=PropertyChanged}" Height="20" Panel.ZIndex="-2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 0, 0, 0"/>
-        <Button Visibility="{Binding Path=ShowAllItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Cart" Command="{Binding GetCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0"/>
-        <Button Visibility="{Binding Path=ShowCartItems,  Converter={StaticResource booleanToVisibilityConverter}}" Content="Close Cart" Command="{Binding CloseCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0"/>
+        <Button Visibility="{Binding Path=ShowAllItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Add to Cart" Command="{Binding AddToCartCommand, UpdateSourceTrigger=PropertyChanged}" Panel.ZIndex="-2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 0, 0, 0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>
+        <Button Visibility="{Binding Path=ShowCartItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Remove from Cart" Command="{Binding RemoveFromCartCommand, UpdateSourceTrigger=PropertyChanged}" Panel.ZIndex="-2" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="40, 0, 0, 0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5" Grid.IsSharedSizeScope="True"/>
+        <Button Visibility="{Binding Path=ShowAllItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Cart" Command="{Binding GetCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>
+        <Button Visibility="{Binding Path=ShowCartItems,  Converter={StaticResource booleanToVisibilityConverter}}" Content="Close Cart" Command="{Binding CloseCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>
         <ListBox Visibility="{Binding Path=ShowAllItems, 
                     Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" SelectedIndex="{Binding SelectedItemIndex}" Margin="40">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel Margin="5">
-                        <TextBlock FontSize="18" Text="{Binding Path=Name}"/>
-                        <TextBlock Text="{Binding Path=Price}"/>
-                        <TextBlock Text="{Binding Path=Description}"/>
+                    <StackPanel Margin="5" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                        <TextBlock FontSize="18" Text="{Binding Path=Name}" Margin="0,0,20,0"/>
+                        <TextBlock Text="{Binding Path=Price}" Margin="0,0,20,0" VerticalAlignment="Center"/>
+                        <TextBlock Text="{Binding Path=Description}" Margin="0,0,20,0" VerticalAlignment="Center"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
