@@ -12,7 +12,7 @@
         <Button Visibility="{Binding Path=ShowAllItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Cart" Command="{Binding GetCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>
         <Button Visibility="{Binding Path=ShowCartItems,  Converter={StaticResource booleanToVisibilityConverter}}" Content="Close Cart" Command="{Binding CloseCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>
         <ListBox Visibility="{Binding Path=ShowAllItems, 
-                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" SelectedIndex="{Binding SelectedItemIndex}" Margin="40">
+                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="40">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
@@ -24,7 +24,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <ListBox Visibility="{Binding Path=ShowCartItems, 
-                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding ItemsInCart}" SelectedItem="{Binding SelectedItem}" SelectedIndex="{Binding SelectedItemIndex}" Margin="40">
+                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding ItemsInCart}" SelectedItem="{Binding SelectedItem}" Margin="40">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">

@@ -9,8 +9,6 @@ namespace Shop.ViewModel
     {
         private Item _selectedItem;
 
-        private int _selectedItemIndex;
-
         private bool _showAllItems;
         private bool _showCartItems;
 
@@ -39,15 +37,6 @@ namespace Shop.ViewModel
             {
                 _selectedItem = value;
                 RaisePropertyChanged(nameof(SelectedItem));
-            }
-        }
-
-        public int SelectedItemIndex
-        {
-            get { return _selectedItemIndex; }
-            set
-            {
-                _selectedItemIndex = value;
             }
         }
 

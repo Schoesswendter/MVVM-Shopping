@@ -1,0 +1,25 @@
+[1mdiff --git a/.vs/Shop/v16/.suo b/.vs/Shop/v16/.suo[m
+[1mindex 978016f..f4e1d06 100644[m
+Binary files a/.vs/Shop/v16/.suo and b/.vs/Shop/v16/.suo differ
+[1mdiff --git a/Shop/View/ItemList.xaml b/Shop/View/ItemList.xaml[m
+[1mindex 560e4ab..017db8f 100644[m
+[1m--- a/Shop/View/ItemList.xaml[m
+[1m+++ b/Shop/View/ItemList.xaml[m
+[36m@@ -12,7 +12,7 @@[m
+         <Button Visibility="{Binding Path=ShowAllItems, Converter={StaticResource booleanToVisibilityConverter}}" Content="Cart" Command="{Binding GetCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>[m
+         <Button Visibility="{Binding Path=ShowCartItems,  Converter={StaticResource booleanToVisibilityConverter}}" Content="Close Cart" Command="{Binding CloseCartCommand, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,40,0" Background="#FF007DC5" Foreground="White" BorderBrush="{x:Null}" Padding="15,5,15,5"/>[m
+         <ListBox Visibility="{Binding Path=ShowAllItems, [m
+[31m-                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" SelectedIndex="{Binding SelectedItemIndex}" Margin="40">[m
+[32m+[m[32m                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" Margin="40">[m
+             <ListBox.ItemTemplate>[m
+                 <DataTemplate>[m
+                     <StackPanel Margin="5" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">[m
+[36m@@ -24,7 +24,7 @@[m
+             </ListBox.ItemTemplate>[m
+         </ListBox>[m
+         <ListBox Visibility="{Binding Path=ShowCartItems, [m
+[31m-                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding ItemsInCart}" SelectedItem="{Binding SelectedItem}" SelectedIndex="{Binding SelectedItemIndex}" Margin="40">[m
+[32m+[m[32m                    Converter={StaticResource booleanToVisibilityConverter}}" ItemsSource="{Binding ItemsInCart}" SelectedItem="{Binding SelectedItem}" Margin="40">[m
+             <ListBox.ItemTemplate>[m
+                 <DataTemplate>[m
+                     <StackPanel Margin="5">[m
