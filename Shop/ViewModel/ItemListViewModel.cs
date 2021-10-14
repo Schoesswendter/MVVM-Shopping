@@ -78,16 +78,16 @@ namespace Shop.ViewModel
            // Put example Products
            Items = new ObservableCollection<Item>()
             {
-                new Item(){Name="Product 1", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 2", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 3", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 4", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 5", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 6", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 7", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 8", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 9", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
-                new Item(){Name="Product 10", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false}
+                new Item(){Name="Product 1", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 2", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 3", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 4", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 5", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 6", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 7", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 8", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 9", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"},
+                new Item(){Name="Product 10", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut"}
             };
             ItemsInCart = new ObservableCollection<Item>();
         }
