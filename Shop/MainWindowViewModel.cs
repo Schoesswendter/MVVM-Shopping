@@ -16,6 +16,7 @@ namespace Shop
             set => selectedTitle = value;
         }
         public ItemListViewModel ItemList { get; set; } = new ItemListViewModel();
+        public MessageBoxViewModel MessageBox { get; set; } = new MessageBoxViewModel();
 
         public MainWindowViewModel()
         {
