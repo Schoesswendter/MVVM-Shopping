@@ -68,7 +68,8 @@ namespace Shop.ViewModel
 
         public ItemListViewModel()
         {
-            AddToCartCommand = new SimpleCommand(PutIntoCart);
+            // To Test enable of Button you can only put in 5 products :))
+            AddToCartCommand = new SimpleCommand(PutIntoCart, obj => ItemsInCart.Count < 5);
             GetCartCommand = new SimpleCommand(GetCart);
             CloseCartCommand = new SimpleCommand(CloseCart);
             RemoveFromCartCommand = new SimpleCommand(RemoveFromCart);

@@ -24,5 +24,3 @@ C:\Users\michaela.schoesswend\source\repos\Shop\Shop\obj\Debug\net5.0-windows\Vi
 C:\Users\michaela.schoesswend\source\repos\Shop\Shop\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\michaela.schoesswend\source\repos\Shop\Shop\obj\Debug\net5.0-windows\View\ItemList.baml
 C:\Users\michaela.schoesswend\source\repos\Shop\Shop\obj\Debug\net5.0-windows\App.baml
-C:\Users\michaela.schoesswend\source\repos\Shop\Shop\obj\Debug\net5.0-windows\View\ItemDetails.g.cs
-C:\Users\michaela.schoesswend\source\repos\Shop\Shop\obj\Debug\net5.0-windows\View\ItemDetails.baml
