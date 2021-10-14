@@ -7,9 +7,9 @@ namespace Shop.ViewModel
 {
     public class ItemListViewModel : NotificationObject
     {
-        private Item selectedItem;
+        private Item _selectedItem;
 
-        private int selectedItemIndex;
+        private int _selectedItemIndex;
 
         public ObservableCollection<Item> Items { get; set; }
         public ObservableCollection<Item> ItemsInCart { get; set; }
@@ -19,20 +19,20 @@ namespace Shop.ViewModel
 
         public Item SelectedItem
         {
-            get { return selectedItem; }
+            get { return _selectedItem; }
             set
             {
-                selectedItem = value;
+                _selectedItem = value;
                 RaisePropertyChanged("selectedItem");
             }
         }
 
         public int SelectedItemIndex
         {
-            get { return selectedItemIndex; }
+            get { return _selectedItemIndex; }
             set
             {
-                selectedItemIndex = value;
+                _selectedItemIndex = value;
             }
         }
 
@@ -43,11 +43,11 @@ namespace Shop.ViewModel
 
         private void PutIntoCart(object item)
         {
-            ItemsInCart.Add(selectedItem);
+            ItemsInCart.Add(_selectedItem);
         }
         private void RemoveFromCart(object item)
         {
-            ItemsInCart.Remove(selectedItem);
+            ItemsInCart.Remove(_selectedItem);
         }
 
         private void GetCart(object obj)
