@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace Shop.Utilities
 {
-    class SimpleCommand : ICommand
+    public class SimpleCommand : ICommand
     {
         private Action<object> ExecuteDelagete { get; }
         private Func<object, bool> CanExecuteDelegate { get; }

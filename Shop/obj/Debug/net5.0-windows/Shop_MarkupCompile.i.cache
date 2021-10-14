@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\michaela.schoesswend\source\repos\Shop\Shop\App.xaml
-11407045341
+21216446915
 
-101785134365
+11464875614
 193-1891726104
-MainWindow.xaml;
+MainWindow.xaml;View\ItemList.xaml;
 
-False
+True
 

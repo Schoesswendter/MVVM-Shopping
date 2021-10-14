@@ -1,20 +1,24 @@
-﻿using Shop.Utilities;
+﻿using Shop.Model;
+using Shop.Utilities;
+using Shop.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shop
 {
     public class MainWindowViewModel : NotificationObject
     {
-        public string selectedTitle = "Best Shop ｡ﾟ( ﾟஇ‸இﾟ)ﾟ｡";
+        public string selectedTitle = "Shop";
 
-        public string Title { 
+        public string Title
+        {
             get => selectedTitle;
             set => selectedTitle = value;
+        }
+        public ItemListViewModel ItemList { get; set; } = new ItemListViewModel();
+
+        public MainWindowViewModel()
+        {
         }
     }
 }

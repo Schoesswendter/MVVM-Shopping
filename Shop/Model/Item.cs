@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Shop.Model
 {
-    class Item
+    public class Item
     {
         public string Name { get; set; }
         public int Price { get; set; }
         public string Description { get; set; }
-        public bool InShoppingCard { get; set; }
+        public bool InShoppingCart { get; set; }
     }
 }

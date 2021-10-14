@@ -8,16 +8,6 @@
         Title="{Binding Title}" Height="450" Width="800">
     <Grid>
         <TextBlock HorizontalAlignment="Center" Text="{Binding Title}" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontWeight="Bold" FontSize="28" FontFamily="Bahnschrift SemiBold" Margin="0,0,-3,0"/>
-        <ListBox Grid.Row="1" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" SelectedIndex="{Binding SelectedItemIndex}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="5">
-                        <TextBlock FontSize="18" Text="{Binding Path=Title}"/>
-                        <TextBlock Text="{Binding Path=Company}"/>
-                        <TextBlock Text="{Binding Path=Price}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <ContentPresenter Content="{Binding ItemList}" Grid.Row="0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

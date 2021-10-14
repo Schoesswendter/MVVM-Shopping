@@ -1,33 +1,94 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
+using Shop.Model;
 using Shop.Utilities;
 
 namespace Shop.ViewModel
 {
-    class ItemListViewModel : NotificationObject
+    public class ItemListViewModel : NotificationObject
     {
-        private Item selectedPhone;
+        private Item selectedItem;
 
-        private int selectedPhoneIndex;
+        private int selectedItemIndex;
 
-        public ObservableCollection<Item> Phones { get; set; }
+        public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Item> ItemsInCart { get; set; }
 
-        public Item SelectedPhone
+        public bool ShowAllItems { get; set; }
+        public bool ShowCartItems { get; set; }
+
+        public Item SelectedItem
         {
-            get { return selectedPhone; }
+            get { return selectedItem; }
             set
             {
-                selectedPhone = value;
-                RaisePropertyChanged("SelectedPhone");
+                selectedItem = value;
+                RaisePropertyChanged("selectedItem");
             }
         }
 
-        public int SelectedPhoneIndex
+        public int SelectedItemIndex
         {
-            get { return selectedPhoneIndex; }
+            get { return selectedItemIndex; }
             set
             {
-                selectedPhoneIndex = value;
+                selectedItemIndex = value;
             }
+        }
+
+        public SimpleCommand AddToCartCommand { get; set; }
+        public SimpleCommand GetCartCommand { get; set; }
+        public SimpleCommand CloseCartCommand { get; set; }
+        public SimpleCommand RemoveFromCartCommand { get; set; }
+
+        private void PutIntoCart(object item)
+        {
+            ItemsInCart.Add(selectedItem);
+        }
+        private void RemoveFromCart(object item)
+        {
+            ItemsInCart.Remove(selectedItem);
+        }
+
+        private void GetCart(object obj)
+        {
+            ShowAllItems = false;
+            ShowCartItems = true;
+            RaisePropertyChanged("ShowAllItems");
+            RaisePropertyChanged("ShowCartItems");
+        }
+        
+        private void CloseCart(object obj)
+        {
+            ShowAllItems = true;
+            ShowCartItems = false;
+            RaisePropertyChanged("ShowAllItems");
+            RaisePropertyChanged("ShowCartItems");
+        }
+
+        public ItemListViewModel()
+        {
+            AddToCartCommand = new SimpleCommand(PutIntoCart);
+            GetCartCommand = new SimpleCommand(GetCart);
+            CloseCartCommand = new SimpleCommand(CloseCart);
+            RemoveFromCartCommand = new SimpleCommand(RemoveFromCart);
+
+            ShowAllItems = true;
+           // Put example Products
+           Items = new ObservableCollection<Item>()
+            {
+                new Item(){Name="Product 1", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 2", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 3", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 4", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 5", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 6", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 7", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 8", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 9", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false},
+                new Item(){Name="Product 10", Price=10, Description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut", InShoppingCart=false}
+            };
+            ItemsInCart = new ObservableCollection<Item>();
         }
     }
 }
