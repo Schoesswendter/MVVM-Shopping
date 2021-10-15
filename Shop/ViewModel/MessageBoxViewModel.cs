@@ -40,12 +40,8 @@ namespace Shop.ViewModel
                 case "add":                   
                     Information = $"{itemName} was added to your Shopping Cart!";
                     break;
-
-                case "remove":
-                    Information = $"{itemName} was removed from your Shopping Cart!";
-                    break;
-
                 default:
+                    Information = $"{itemName} was removed from your Shopping Cart!";
                     break;
             }
         }

@@ -54,9 +54,9 @@ namespace Shop.ViewModel
         }
         private void RemoveFromCart(object item)
         {
-            ItemsInCart.Remove(_selectedItem);
             AddToCartCommand.RaiseCanExecuteChanged();
             if (_selectedItem is not null) { MessageBox.CreateMessage("remove", $"{_selectedItem.Name}"); };
+            ItemsInCart.Remove(_selectedItem);
         }
 
         private void GetCart(object obj)
