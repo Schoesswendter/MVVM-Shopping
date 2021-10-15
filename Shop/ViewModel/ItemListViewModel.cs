@@ -44,20 +44,19 @@ namespace Shop.ViewModel
         public SimpleCommand GetCartCommand { get; set; }
         public SimpleCommand CloseCartCommand { get; set; }
         public SimpleCommand RemoveFromCartCommand { get; set; }
-
         public MessageBoxViewModel MessageBox { get; set; } = new MessageBoxViewModel();
 
         private void PutIntoCart(object item)
         {
             ItemsInCart.Add(_selectedItem);
             AddToCartCommand.RaiseCanExecuteChanged();
-            MessageBox.CreateMessage("add", $"{_selectedItem.Name}");
+            if (_selectedItem is not null) { MessageBox.CreateMessage("add", $"{_selectedItem.Name}"); };
         }
         private void RemoveFromCart(object item)
         {
             ItemsInCart.Remove(_selectedItem);
             AddToCartCommand.RaiseCanExecuteChanged();
-            MessageBox.CreateMessage("remove", $"{_selectedItem?.Name}");
+            if (_selectedItem is not null) { MessageBox.CreateMessage("remove", $"{_selectedItem.Name}"); };
         }
 
         private void GetCart(object obj)

@@ -15,11 +15,13 @@ namespace Shop
             get => selectedTitle;
             set => selectedTitle = value;
         }
-        public ItemListViewModel ItemList { get; set; } = new ItemListViewModel();
-        public MessageBoxViewModel MessageBox { get; set; } = new MessageBoxViewModel();
+        public ItemListViewModel ItemList { get; set; }
+        public MessageBoxViewModel MessageBox { get; set; }
 
         public MainWindowViewModel()
         {
+            ItemList = new ItemListViewModel();
+            MessageBox = ItemList.MessageBox;
         }
     }
 }
