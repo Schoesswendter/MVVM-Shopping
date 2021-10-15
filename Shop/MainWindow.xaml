@@ -9,5 +9,6 @@
     <Grid>
         <TextBlock HorizontalAlignment="Center" Text="{Binding Title}" TextWrapping="Wrap" VerticalAlignment="Top" Height="42" FontWeight="Bold" FontSize="28" FontFamily="Bahnschrift SemiBold" Margin="0,0,-3,0"/>
         <ContentPresenter Content="{Binding ItemList}" Grid.Row="0" VerticalAlignment="Top"/>
+        <ContentPresenter Content="{Binding MessageBox}" Grid.Row="0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

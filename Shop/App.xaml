@@ -11,6 +11,9 @@
         <DataTemplate DataType="{x:Type localViewModel:ItemListViewModel}">
             <localView:ItemList/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type localViewModel:MessageBoxViewModel}">
+            <localView:MessageBox/>
+        </DataTemplate>
         <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter"/>
     </Application.Resources>
 </Application>

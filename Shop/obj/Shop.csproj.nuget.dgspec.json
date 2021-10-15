@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\michaela.schoesswend\\source\\repos\\Shop\\Shop\\Shop.csproj": {}
+    "C:\\Users\\michaela.schoesswend\\source\\repos\\MVVM-Shopping\\Shop\\Shop.csproj": {}
   },
   "projects": {
-    "C:\\Users\\michaela.schoesswend\\source\\repos\\Shop\\Shop\\Shop.csproj": {
+    "C:\\Users\\michaela.schoesswend\\source\\repos\\MVVM-Shopping\\Shop\\Shop.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\michaela.schoesswend\\source\\repos\\Shop\\Shop\\Shop.csproj",
+        "projectUniqueName": "C:\\Users\\michaela.schoesswend\\source\\repos\\MVVM-Shopping\\Shop\\Shop.csproj",
         "projectName": "Shop",
-        "projectPath": "C:\\Users\\michaela.schoesswend\\source\\repos\\Shop\\Shop\\Shop.csproj",
+        "projectPath": "C:\\Users\\michaela.schoesswend\\source\\repos\\MVVM-Shopping\\Shop\\Shop.csproj",
         "packagesPath": "C:\\Users\\michaela.schoesswend\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\michaela.schoesswend\\source\\repos\\Shop\\Shop\\obj\\",
+        "outputPath": "C:\\Users\\michaela.schoesswend\\source\\repos\\MVVM-Shopping\\Shop\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\michaela.schoesswend\\AppData\\Roaming\\NuGet\\NuGet.Config",
