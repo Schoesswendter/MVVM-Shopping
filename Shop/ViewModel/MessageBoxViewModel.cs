@@ -19,7 +19,7 @@ namespace Shop.ViewModel
             get => _date; set
             {
                 _date = value;
-                RaisePropertyChanged(nameof(_date));
+                RaisePropertyChanged(nameof(Date));
             }
         }
         public string Information
@@ -27,12 +27,12 @@ namespace Shop.ViewModel
             get => _information; set
             {
                 _information = value;
-                RaisePropertyChanged(nameof(_information));
+                RaisePropertyChanged(nameof(Information));
             }
         }
         public void CreateMessage(string type, string itemName)
         {
-            DateTime currentDate = new DateTime().Date;
+            DateTime currentDate = DateTime.Now;
             Date = currentDate.ToString("HH:mm");
 
             switch (type)
